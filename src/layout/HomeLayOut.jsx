@@ -12,7 +12,7 @@ const HomeLayOut = () => {
       </Header>
       <main className="mx-auto w-11/12 my-3 grid grid-cols-12 gap-5">
         {/* Left Navvar  */}
-        <section className="col-span-3">
+        <section className="col-span-3 sticky h-fit top-0">
           <LeftAside></LeftAside>
         </section>
         {/* Outlet Section */}
@@ -20,7 +20,7 @@ const HomeLayOut = () => {
           <Outlet></Outlet>
         </section>
         {/* Right Navvar */}
-        <section className="col-span-3">
+        <section className="col-span-3 sticky h-fit top-0">
           <RightAside></RightAside>
         </section>
       </main>
