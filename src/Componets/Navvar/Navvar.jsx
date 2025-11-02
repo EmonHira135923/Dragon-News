@@ -3,6 +3,7 @@ import { Menu, X, House } from "lucide-react";
 import { NavLink } from "react-router";
 import { FaInfoCircle, FaSignInAlt } from "react-icons/fa";
 import { MdWorkspacePremium } from "react-icons/md";
+import manimg from "../../assets/user.png";
 
 const Navvar = () => {
   const activeclass =
@@ -17,7 +18,7 @@ const Navvar = () => {
   ];
 
   return (
-    <nav className="p-5 bg-white text-accent ">
+    <nav className="p-5 bg-base-300 text-accent ">
       <div className="flex justify-between gap-5 items-center mt-3 text-xl font-bold ">
         {/* Start: Logo and Mobile Menu Button */}
         <div className="flex items-center gap-2">
@@ -64,9 +65,19 @@ const Navvar = () => {
         </div>
 
         {/* GitHub Button */}
-        <div className="flex">
-          <button className="btn btn-primary text-white  text-xl py-6 px-5 md:p-7 md:w-40  ">
-            <NavLink className="flex items-center gap-2" to="">
+        <div className="flex items-center gap-5">
+          <div>
+            <img
+              src={manimg}
+              alt=""
+              className="w-500px bg-base-200 rounded-2xl"
+            />
+          </div>
+          <button className="btn btn-primary text-base-200  text-xl py-6 px-5 md:p-7 md:w-40  ">
+            <NavLink
+              className="flex items-center gap-2 text-base-200"
+              to={"/auth/login"}
+            >
               <FaSignInAlt /> Login
             </NavLink>
           </button>
